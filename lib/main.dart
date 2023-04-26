@@ -12,16 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      /** 
-   --------------- Focus Here  -----------------------
-     **/
-      home: BlocProvider(
-        create: (context) => UserBloc(),
-        child: MyBlocPage(),
-      ),
-    );
-    /** 
-   --------------- Focus Here  -----------------------
-     **/
+        title: "Bloc Lesson",
+        theme: ThemeData.dark(),
+        /** --------------- Focus Here  -----------------------**/
+        home: BlocProvider(
+            create: (context) => UserBloc(), //the Builder
+            child: MyBlocPage())); //the Page
+    /** --------------- Focus Here  -----------------------**/
   }
 }
